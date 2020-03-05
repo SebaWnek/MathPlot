@@ -1,0 +1,18 @@
+﻿<Window x:Class="MathPlot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MathPlot"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Canvas x:Name="background">
+            <Label x:Name="iterationLabel" Content="Iteration:" FontSize="20"/>
+            <Label x:Name="MSELabel" Content="MSE: " FontSize="20" Canvas.Top="30"/>
+            <ListBox x:Name="MSEListBox" Canvas.Top="60" ScrollViewer.CanContentScroll="True" MaxHeight="1000"/>
+        </Canvas>
+    </Grid>
+</Window>
