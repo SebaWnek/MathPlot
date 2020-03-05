@@ -17,22 +17,19 @@ using NeuralNetwork;
 
 namespace MathPlot
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        CanvasConvert converter;
-        Network network;
-        int[] horizontalRange;
-        int[] verticalRange;
-        double[] middleOfRange = new double[2];
-        int horizontalSize;
-        int verticalSize;
-        int horizontalAxisPointCount;
-        int verticalAxisPointCount;
-        int axisPointLenght = 5;
-        int accuracy = 10000;
+        CanvasConvert converter; //helper class for calculating math coordinates into screen coordinates
+        Network network; //neural network 
+        int[] horizontalRange; //range of values in horizontal direction 
+        int[] verticalRange; //range of values in vertical direction
+        double[] middleOfRange = new double[2]; //fraction pointing to position of middle of the plot on screen
+        int horizontalSize; //total range in horizontal direction
+        int verticalSize; //total range in horizontal direction
+        int horizontalAxisPointCount; //number of axis points in horizontal direction
+        int verticalAxisPointCount; //number of axis points in vertical direction
+        int axisPointLenght = 5; //lenght of axis point mark
+        int accuracy = 10000; //number of polyline points to be calculated - the more points the more accurate plot
 
         Dictionary<string, Polyline> graphList = new Dictionary<string, Polyline>();
         public MainWindow()
